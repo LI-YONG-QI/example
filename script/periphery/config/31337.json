@@ -1,0 +1,11 @@
+{
+  "Vault": {
+    "_limit": 1000,
+    "weth": "0x94373a4919B3240D86eA41593D5eBa789FEF3848"
+  },
+  "Router": {
+    "_aaveV3Pool": "0x1F98431c8aD98523631AE4a59f267346ea31F984",
+    "_uniswapV3Pool": "0x1b02dA8Cb0d097eB8D57A175b88c7D8b47997506",
+    "_USDT": "0x07de306FF27a2B630B1141956844eB1552B956B5"
+  }
+}
