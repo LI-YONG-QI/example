@@ -1,66 +1,36 @@
-## Foundry
+# Fuse Example
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+This is Fuse example.
 
-Foundry consists of:
+## How to started
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+### Prerequisites
 
-## Documentation
+- Install Fuse globally via npm:
 
-https://book.getfoundry.sh/
-
-## Usage
-
-### Build
-
-```shell
-$ forge build
+```bash
+npm i -g @fuse-kit/fuse
 ```
 
-### Test
+### Steps
 
-```shell
-$ forge test
+1. Build
+
+```bash
+forge build
+
 ```
 
-### Format
+2. Generate `Deployer.sol`
 
-```shell
-$ forge fmt
+```bash
+fuse core && fuse periphery
 ```
 
-### Gas Snapshots
+Check `Deployer.sol` whether under the script folder.
 
-```shell
-$ forge snapshot
-```
+3. Run script
 
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
+```bash
+forge script CoreScript && forge script PeripheryScript
 ```
