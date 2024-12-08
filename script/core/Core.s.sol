@@ -9,7 +9,7 @@ contract CoreScript is Script {
     function run() external {
         vm.startBroadcast(0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80);
 
-        address tokenAddr = Deployer.deployToken();
+        address tokenAddr = Deployer.deployToken(address(this));
         Token token = Token(tokenAddr);
 
         console.log("Token x:", token.x());
@@ -18,13 +18,4 @@ contract CoreScript is Script {
 
         vm.stopBroadcast();
     }
-
-    // function testDeployToken() public {
-    //     vm.startBroadcast(0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80);
-
-    //     Token token2 = new Token(1, 2, address(this));
-    //     console.log("Token x:", token2.x());
-
-    //     vm.stopBroadcast();
-    // }
 }

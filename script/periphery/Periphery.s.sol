@@ -2,7 +2,7 @@ pragma solidity ^0.8.13;
 
 import {Deployer} from "./Deployer.sol";
 import {Script, console} from "forge-std/Script.sol";
-import {Broadcast} from "forge_deploy/Broadcast.sol";
+import {Broadcast} from "fuse-contracts/Broadcast.sol";
 
 import {Vault} from "../../src/Vault.sol";
 import {Router} from "../../src/Router.sol";

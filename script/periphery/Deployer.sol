@@ -1,6 +1,6 @@
 pragma solidity ^0.8.0;
 
-import {Config} from "forge_deploy/Config.sol";
+import {Config} from "fuse-contracts/Config.sol";
 import {Vm} from "forge-std/Vm.sol";
 
 library Deployer {
